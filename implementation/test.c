@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<math.h>
+
 int main(){
     float V=0,I=0,R=0,P=0;
     int x=0;
