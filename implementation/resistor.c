@@ -2,7 +2,7 @@
 #include <math.h>
 #include "code_func.h"
 
-int main()
+void resistor_code()
 {
      char    code[10];     /* one code per band */
      double  resistance;
@@ -63,12 +63,5 @@ int main()
          }
        
      }
-   return 0;
 }
-
-    
-
-
-/*   This function prints a menu of color codes to guide the user in
-     entering input.                                               */
 
