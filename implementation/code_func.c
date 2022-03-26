@@ -17,6 +17,7 @@ void  print_codes( void )
    printf( "\tWhite-------------------> W\n" );
    printf( "\tGold--------------------> U\n" );
    printf( "\tSilver------------------> Z\n" );
+   printf( "\tNo colour---------------> X\n" );
 }
 
 

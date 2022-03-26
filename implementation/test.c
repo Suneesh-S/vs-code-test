@@ -114,9 +114,9 @@ void ohms_law(){
         value[3]=pow(value[0],2)/value[2];
     }
     
-    printf("the values are:\n");
+    printf("\nthe values are:\n\n");
     for(int i=0;i<4;i++){
-        printf("%s is %f \n",param[i],value[i]);
+        printf("%s is %.2f%s\n",param[i],value[i],unit[i]);
     }
     
 }
@@ -133,11 +133,24 @@ void LED_series(){
     scanf("%lf",&Vf);
     printf("Enter the Forward Current:");
     scanf("%lf",&If);
-
+  
     *ans1=(Vs-Vf)/If;
     *ans2=(Vs-Vf)*If;
     printf("The series Resistance value for LED is:%.3lfK ohms\n",R);
     printf("The Power value for LED is:%.3lfmW\n",P);
 }
 
- 
+void battery_life(){
+    float mAh,mA;
+    float life;
+    printf("Enter the Battery Capacity(mAh):");
+    scanf("%f",&mAh);
+    printf("Enter the Device Consumption(mA):");
+    scanf("%f",&mA);
+    life=mAh/mA;
+    
+    int x=life;
+    float min=(life-x)*60;
+    int hour=(int)life;
+    printf("the battery life in hours is:%d hours %.1f minutes\n",hour,min);
+}
