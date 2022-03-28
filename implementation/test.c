@@ -81,7 +81,8 @@ void ohms_law_print(){
 
 void LED_series_print(){
     double Vs,Vf,If;
-    Struct result;
+    double res[2]={0};
+    double* result;
     printf("Use this tool to calculate resistance to drive series connected LED...\n");
     printf("Enter the Supply Voltage:");
     scanf("%lf",&Vs);
@@ -89,9 +90,10 @@ void LED_series_print(){
     scanf("%lf",&Vf);
     printf("Enter the Forward Current:");
     scanf("%lf",&If);
-    result=LED_calc(Vs,Vf,If);
-    printf("The series Resistance value for LED is:%.2lfK ohms\n",result.R);
-    printf("The Power value for LED is:%.3lfmW\n",result.P);
+
+    result=LED_calc(Vs,Vf,If,res);
+    printf("The series Resistance value for LED is:%.2lfK ohms\n",result[0]);
+    printf("The Power value for LED is:%.3lfmW\n",result[1]);
 }
 
 void battery_life_print(){
@@ -198,19 +200,20 @@ float* ohms_law_calc(float value[]){
     return value;
 }
 
-Struct LED_calc(double Vs,double Vf,double If){
-  Struct  s;
+double* LED_calc(double Vs,double Vf,double If,double* res){
+  
   double R,P;
+  
   double *ans1,*ans2;
   ans1=&R;
   ans2=&P;
 
     *ans1=(Vs-Vf)/If;
     *ans2=(Vs-Vf)*If;
-     s.R=*ans1;
-     s.P=*ans2;
+     res[0]=R;
+     res[1]=P;
 
-    return s;
+    return res;
 }
 
 float bat_life_calc(float mAh,float mA){
