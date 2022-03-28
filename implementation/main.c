@@ -21,13 +21,13 @@ int main(){
         scanf("%d",&n);
 
         if(n==1){
-            resistor_code();
+            resistor_code_print();
         }else if(n==2){
-            ohms_law();
+            ohms_law_print();
         }else if(n==3){
-            LED_series();
+            LED_series_print();
         }else if(n==4){
-            battery_life();
+            battery_life_print();
         }else{
             printf("\tWrong Entry..bye...bye\n");
             break;
