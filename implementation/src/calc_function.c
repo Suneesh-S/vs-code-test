@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-#include "inc/print_function.h"
+#include "res_switch_case.h"
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 /*calculator function*/

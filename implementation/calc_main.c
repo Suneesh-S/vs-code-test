@@ -1,12 +1,12 @@
 #include<stdio.h>
 #include<math.h>
-#include "inc/print_function.h"
+#include "print_function.h"
 
-extern int test_main();
+//extern int test_main();
 
 int main(){
 
-    test_main();
+    //test_main();
 
     char choice='N';
     int n;

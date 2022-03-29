@@ -40,7 +40,7 @@ void test_resistor_calculator(){
     TEST_ASSERT_EQUAL_FLOAT_ARRAY(answer3,resistor_code_calc(6,code3),4);
 }
 
-int test_main(void){
+int main(void){
 
     UnityBegin(NULL);
 
