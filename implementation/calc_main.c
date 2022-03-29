@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-#include "print_function.h"
+#include "inc/print_function.h"
 
 extern int test_main();
 
